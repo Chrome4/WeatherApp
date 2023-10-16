@@ -8,4 +8,4 @@ Check the weather for your area and search locations!
 
 ## Link
 
-https://github.com/Chrome4/WeatherApp
+https://chrome4.github.io/WeatherApp/
