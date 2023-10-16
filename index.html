@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>U-Weather</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <span class="navbar-brand brand-text h1">Weather App</span>
+        <div class="nav-items d-flex justify-content-end">
+          <input id="buttons" class="search d-inline-block align-top text-center" id="nav-links" placeholder="Search (City, State)">
+          <button id="button" class="button">Go!</button>
+        </input>
+        </div>
+      </div>
+    </nav>
+    <header>
+      <h1>Home</h1>
+      <div id="header-line"></div>
+    </header>
+    <div class="container-fluid pt-4 page-contents" id="home-page">
+      <div class="row">
+        <aside class="col-md-4 col-lg-3 h-100">
+          <div id="featured-news"></div>
+        </aside>
+        <main class="col-md-8 col-lg-9">
+          <div class="card mb-4" id="weather-card">
+            <div class="card-header text-center weather-header">
+              <h3>Forecast for <span id="city1"></span></h3>
+              <h4><span id="date"></span></h4>
+            </div>
+            <div
+              class="card-body d-flex justify-content-around weather-background cardLinks"
+              id="condition-cards"
+            >
+              <!-- Temp -->
+              <a>
+                <div class="card tempcard" id="weather-condition">
+                  <img
+                    class="card-img-top"
+                  />
+                  <div class="card-body">
+                    <h5 id="temperature" class="card-title">
+                      <u>Temperature:</u>
+                    </h5>
+                    <p id="temp" class="card-text"></p>
+                  </div>
+                </div>
+              </a>
+              <!-- Humidity -->
+              <a>
+                <div class="card tempcard" id="weather-condition">
+                  <img
+                    class="card-img-top"
+                  />
+                  <div class="card-body">
+                    <h5 id="humidity" class="card-title"><u>Humidity:</u></h5>
+                    <p id="humidity1" class="card-text"></p>
+                  </div>
+                </div>
+              </a>
+              <!-- Wind Speed-->
+              <a>
+                <div class="card tempcard" id="weather-condition">
+                  <img
+                    class="card-img-top"
+                  />
+                  <div class="card-body">
+                    <h5 id="wind-speed" class="card-title">
+                      <u>Wind Speed:</u>
+                    </h5>
+                    <p id="windspeed" class="card-text"></p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          
+          <div class="card mb-4 text-center" id="tasks-card">
+            <div class="card-header">
+              <h3>5-Day Forecast</h3>
+            </div>
+            <div class="card-body" id="tasks">
+              <div id="forecast"></div>
+              
+              
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
